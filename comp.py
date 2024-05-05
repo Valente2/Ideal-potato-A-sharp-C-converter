@@ -1,8 +1,8 @@
 import os
-ifile=input("enter source file")
+ifile=input("enter source file name")
 file1=open(ifile,"r")
 ofile=input("enter name of output file")
-file2=open(ofile,"w")
+file2=open(ofile,"a")
 count=0
 command=[]
 while True:
@@ -18,8 +18,11 @@ while True:
 for item in command:
     if item=="init":
         file2.write("#include <stdio.h>\n\nint main(){")
+        continue
     if item=="put":
         toprint=next(command)
         file2.write("   printf(",toprint,");")
+        continue
     if item=="end":
         file2.write("    return 0;\n}")
+        continue
