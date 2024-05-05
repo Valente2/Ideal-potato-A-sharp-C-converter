@@ -20,4 +20,6 @@ for item in command:
         file2.write("#include <stdio.h>\n\nint main(){")
     if item=="put":
         toprint=next(command)
-        file2.write("printf(",toprint,");")
+        file2.write("   printf(",toprint,");")
+    if item=="end":
+        file2.write("    return 0;\n}")
