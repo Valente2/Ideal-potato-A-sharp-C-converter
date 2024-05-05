@@ -15,3 +15,9 @@ while True:
     # end of file is reached
     if not line:
         break
+for item in command:
+    if item=="init":
+        file2.write("#include <stdio.h>\n\nint main(){")
+    if item=="put":
+        toprint=next(command)
+        file2.write("printf(",toprint,");")
