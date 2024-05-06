@@ -24,5 +24,9 @@ for item in command:
         file2.write("   printf(",toprint,");")
         continue
     if item=="end":
-        file2.write("    return 0;\n}")
+        file2.write("   return 0;\n}")
         continue
+    if item=="int":
+        name=next(command)
+        value=next(command)
+        file2.write("   int ")
